@@ -7,4 +7,8 @@ function myLoop1(){
   for(var i=start; i<=end; i++){
     document.write('<p>'+i);
   }
+  for(var i=start; i>=end; i--){
+    document.write('<p>'+i);
+  }
+
 }
