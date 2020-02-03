@@ -1,22 +1,18 @@
-function toSet(){
-  var X1 = document.getElementById("X1").value;
-  var Y1 = document.getElementById("Y1").value;
-  var X2 = document.getElementById("X2").value;
-  var Y2 = document.getElementById("Y2").value;
-  X1 = Number(X1);
-  Y1 = Number(Y1);
-  X2 = Number(X2);
-  Y2 = Number(Y2);
-  document.getElementById("orderPair1").innerHTML= "(" + X1 + " , " + Y1 +" )";
-  document.getElementById("orderPair2").innerHTML= "(" + X2 + " , " + Y2 +" )";
-}
-function toStart(){
-  document.getElementById("orderPair1").innerHTML= "(" +  " , "  +" )";
-  document.getElementById("orderPair2").innerHTML= "(" +  " , "  +" )";
-}
-function toFixed(){
-  toSet();
-  var distance = Math.sqrt(Math.pow(Math.abs(X2-X1),2)+Math.pow(Math.abs(Y2-Y1)));
-  distance = Math.round(distance*100)/100;
-
+function getspace(){
+  var x1 = document.getElementById("x1").value;
+  var x2 = document.getElementById("x2").value;
+  var y1 = document.getElementById("y1").value;
+  var y2 = document.getElementById("y2").value;
+  var xdis = (x2-x1);
+  var ydis = (y2-y1);
+  var xresult = Math.pow(xdis, 2);
+  var yresult = Math.pow(ydis, 2);
+  var result = Math.sqrt(xresult+yresult);
+  
+x1=Number(x1);
+x2=Number(x2);
+y1=Number(y1);
+y2=Number(y2);
+  
+  document.getElementById("ans").innerHTML=result;
 }
